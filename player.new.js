@@ -157,7 +157,7 @@ var MCPlayer = (function () {
                     
                 } else {
                     
-                    if(_this.stopAfter) _this.stop()
+                    if(_this.stopAfter) return _this.stop()
                     _this.next()
                 }
             })
