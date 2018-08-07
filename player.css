@@ -1,0 +1,219 @@
+.MCPlayer {
+    background: #e4e6e8;
+    color: #000;
+    font-size: 1.0em;
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}
+
+.MCPlayerTracklist {
+    background: #bac3cb;
+    border: 2px solid #bac3cb;
+    position: absolute;
+    width: 200px;
+    height: 320px;
+    bottom: 100%;
+    left: 10px;
+    overflow-y: scroll;
+}
+
+.MCPlayerTracklist ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.MCPlayerTracklist li {
+    border-bottom: 1px solid #333;
+    padding: .5em;
+}
+
+.MCPlayerTracklist a {
+    color: #999;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
+    text-decoration: none !important;
+}
+
+.MCPlayerTracklist a.isPlaying {
+    font-weight: bold;
+}
+
+.MCPlayerControls,
+.MCPlayerTracker,
+.MCPlayerTitle,
+.MCPlayerDur,
+.MCPlayerSeeker {
+    float: left;
+}
+
+.MCPlayerControls {
+    padding: 0 0;
+    width: 20%;
+    text-align: center;
+}
+
+.MCPlayerControls button {
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+.MCPlayerControls button:hover {
+    color: #007ffd;
+}
+
+.MCPlayerDur {
+    width: 15%;
+    margin-top: 1em;
+}
+
+.MCPlayerSeeker {
+    width: 75%;
+}
+
+.MCPlayerSeekerItem {
+    background: #999;
+    border-radius: 1em;
+    cursor: pointer;
+    height: 2px;
+    overflow: hidden;
+    margin: 1.7em 0 0 0;
+    position: relative;
+}
+
+.MCPlayerTrackerItem {
+    background: #1E87F0;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.MCPlayerTracker {
+    padding: 1em;
+    width: 50%;
+    overflow: auto;
+}
+
+.MCPlayerTitle {
+    padding: 1em;
+    width: 25%;
+    overflow: auto;
+}
+
+.MCPlayerThumb {
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+.MCPlayerTitleItem {
+    float: left;
+    margin: 0 0 0 .5em;
+    width: 60%
+}
+
+.MCPlayerSeekerBuffering {
+    background: cornflowerblue;
+    width: 60px;
+    height: 100%;
+    animation: buffer 5s infinite;
+    position: relative;
+}
+
+.MCPlayerLoopBtn.active,
+.MCPlayerLoopBtn.active:hover {
+    color: #1E87F0;
+}
+
+.MCplayercustom-color {
+	color:#0080ff;
+}
+
+.MCplayercustom-grey {
+	color:#666;
+}
+
+@keyframes buffer {
+    from {
+        left: -60px;
+    }
+    
+    45% {
+        left: 100%;
+    }
+    
+    100% {
+        left: -60px;
+    }
+}
+
+@media (max-width:639px) {
+    .MCPlayer {
+        font-size: .8em;
+        height: 60px;
+    }
+    
+    .MCPlayerControls {
+        width: 15%;
+    }
+    
+    .MCPlayerSeeker {
+        float: none;
+        position: absolute;
+        bottom: 100%;
+        right: 0%;
+        left: 0%;
+        width: 100%;
+    }
+    
+    .MCPlayerSeekerItem {
+        background: #c2c9cf;
+        border-radius: 0;
+        height: 2px;
+    }
+
+    .MCPlayerTracker {
+        widows: 60;
+    }
+    
+    .MCPlayerDur {
+        position: absolute;
+        left: 15%;
+        width: auto;
+        margin-top: 0;
+    }
+    
+    .MCPlayerTitleItem {
+        position: absolute;
+        left: 15%;
+        top: 30px;
+        float: none;
+        overflow: hidden;
+        margin: 0;
+        text-overflow: ellipsis;
+        width: 60%;
+        white-space: nowrap;
+    }
+
+    .MCPlayerThumb {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 60px;
+        height: 60px
+    }
+
+}
